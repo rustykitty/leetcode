@@ -6,7 +6,6 @@ This solution: November 25, 2024
 
 Runtime: 0 ms (beats 100.00%)
 Memory: 8.03 MB (beats 55.00%)
-
 */
 
 char* longestCommonPrefix(char** strs, int strsSize) {

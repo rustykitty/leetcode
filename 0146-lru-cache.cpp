@@ -1,10 +1,11 @@
 /*
 146. LRU Cache
 
+Submitted: November 27, 2024
 
+Runtime: 81 ms (beats 66.53%)
+Memory: 182.14 MB (beats 24.43%)
 */
-
-// note: semi-realistic implementation
 
 class LinkedList {
 public:

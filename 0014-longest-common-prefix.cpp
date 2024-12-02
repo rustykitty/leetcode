@@ -6,7 +6,6 @@ This solution: November 24, 2024
 
 Runtime: 0 ms (beats 100.00%)
 Memory: 11.06 MB (beats 91.10%)
-
 */
 
 class Solution {

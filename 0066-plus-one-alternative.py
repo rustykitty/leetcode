@@ -5,7 +5,6 @@ Submitted: September 27, 2024
 
 Runtime: 41 ms (beats 5.16%)
 Memory: 16.52 MB (63.84%)
-
 """
 
 class Solution:

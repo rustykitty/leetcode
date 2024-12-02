@@ -5,9 +5,7 @@ Last solved: November 22, 2024
 
 Runtime: 0 ms (beats 100.00%)
 Memory: 17.98 MB (beats 14.36%)
-
 """
-
 
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
