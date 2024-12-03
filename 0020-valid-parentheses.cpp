@@ -16,10 +16,10 @@ public:
             if (c == '(' || c == '[' || c == '{') { // opening parentheses
                 stack.push_back(c);
             } else if (stack.empty() || 
-                       stack.back() != (c == ')' ? '(' : // cursed mapping using
-                                        c == ']' ? '[' : // ternary operators
-                                        c == '}' ? '{' : // with fallback
-                                                   c)) { // condition
+                       stack.back() != (c == ')' ? '(' : // matching closing
+                                        c == ']' ? '[' : // parentheses with
+                                        c == '}' ? '{' : // open parentheses
+                                                   c)) {
                 return false;
             } else {
                 stack.pop_back();
