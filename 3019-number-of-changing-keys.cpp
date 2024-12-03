@@ -21,6 +21,6 @@ public:
         return res;
     }
     unsigned char getI(char c) {
-        return c >= 'a' ? c - 'a' : c - 'A';    
+        return c >= 'a' ? c - 'a' : c - 'A';
     }
 };

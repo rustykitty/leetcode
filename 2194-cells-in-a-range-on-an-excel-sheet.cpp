@@ -12,8 +12,8 @@ public:
     vector<string> cellsInRange(string s) {
         vector<string> cells;
         int startColumn = s[0] - 'A',
-            startRow = s[1] - '0', 
-            endColumn = s[3] - 'A' + 1, 
+            startRow = s[1] - '0',
+            endColumn = s[3] - 'A' + 1,
             endRow = s[4] - '0' + 1;
         for (int i = startColumn; i != endColumn; ++i) {
             for (int j = startRow; j != endRow; ++j) {

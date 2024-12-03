@@ -17,7 +17,7 @@ public:
         words.push_back(sentence.substr(0, sentence.find(' '))); // first split
         while ((pos = sentence.find(' ', pos)) != string::npos) { // other splits
             // pos + 1 since sentence[pos] == ' '
-            words.push_back(sentence.substr(pos + 1, pos + sws + 1)); 
+            words.push_back(sentence.substr(pos + 1, pos + sws + 1));
             pos++;
         }
         for (unsigned char i = 0, n = words.size(); i < n; ++i) {

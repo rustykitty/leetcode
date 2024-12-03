@@ -10,7 +10,7 @@ Memory: 7.55 MB (beats 13.43%)
 class Solution {
 public:
     int subtractProductAndSum(int n) {
-        int digitProduct = 1; 
+        int digitProduct = 1;
         int p = n;
         while (p != 0) {
             digitProduct *= p % 10;

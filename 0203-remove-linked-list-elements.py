@@ -20,5 +20,5 @@ class Solution:
         while p:
             while p.next and p.next.val == val:
                 p.next = p.next.next
-            p = p.next 
+            p = p.next
         return dummy.next

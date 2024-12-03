@@ -3,7 +3,7 @@
 
 Submitted: October 4, 2024
 Runtime: 414 ms (beats 5.53%)
-Memory: 35.63 MB (beats 8.45) 
+Memory: 35.63 MB (beats 8.45)
 """
 
 class Solution:

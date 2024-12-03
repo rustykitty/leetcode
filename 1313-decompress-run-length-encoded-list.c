@@ -25,7 +25,7 @@ int* decompressRLElist(int* nums, int numsSize, int* returnSize) {
         int freq = *p;
         int val = *(++p);
         for (unsigned char i = 0; i < freq; ++i) {
-            *r = val; 
+            *r = val;
             ++r;
         }
         p++;

@@ -13,7 +13,7 @@ public:
         if (num == 0) return "0";
         string res = "";
         bool negative = false;
-        if (num < 0) { 
+        if (num < 0) {
             negative = true;
             num = -num;
         }

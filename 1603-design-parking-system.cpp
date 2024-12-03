@@ -9,7 +9,7 @@ class ParkingSystem {
 public:
     unsigned short big, medium, small;
     inline ParkingSystem(int big, int medium, int small) : big(big), medium(medium), small(small) {}
-    
+
     inline bool addCar(int carType) {
         switch (carType) {
             case 1:

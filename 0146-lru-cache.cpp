@@ -21,7 +21,7 @@ public:
 private:
     Node* const head = new Node(-1, -1);
     Node* const tail = new Node(-2, -2);
-    size_type currentSize = 0; 
+    size_type currentSize = 0;
 
     inline void validateNode(Node* node) const {
         if (node == nullptr) throw invalid_argument("Node cannot be null");
@@ -93,7 +93,7 @@ private:
     LinkedList list;
 public:
     LRUCache(int capacity) : capacity((LinkedList::size_type) capacity) {}
-    
+
     int get(int key) {
         if (map.count(key)) {
             list.moveToHead(map[key]);
@@ -101,7 +101,7 @@ public:
         }
         return -1;
     }
-    
+
     void put(int key, int value) {
         if (map.count(key)) {
             list.moveToHead(map[key]);

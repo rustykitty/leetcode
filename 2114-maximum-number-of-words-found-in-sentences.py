@@ -1,5 +1,5 @@
 """
-2114. Maximum Number of Words Found in Sentences 
+2114. Maximum Number of Words Found in Sentences
 
 Submitted: October 18, 2024
 

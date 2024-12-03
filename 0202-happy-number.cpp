@@ -16,7 +16,7 @@ public:
             fast = sumDigits(sumDigits(fast));
             slow = sumDigits(slow);
         }
-        if (fast == 1) return true; 
+        if (fast == 1) return true;
         return false;
     }
     int sumDigits(int n) { // sum squares of digits

@@ -10,7 +10,7 @@ Memory: 12.95 MB (beats 94.71%)
 class Solution {
 public:
     int firstUniqChar(string s) {
-        int occurrences[26] = { 0 }; // using an array as a map w/ fixed values 
+        int occurrences[26] = { 0 }; // using an array as a map w/ fixed values
         for (const char& c : s) {
             occurrences[c - 'a']++;
         }

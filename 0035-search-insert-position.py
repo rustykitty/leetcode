@@ -21,7 +21,7 @@ class Solution:
             else:
                 return -1
         # end binary search function
-        if target in nums: 
+        if target in nums:
             r = bs(nums, len(nums), 0, target)
             if r >= 0:
                 return r

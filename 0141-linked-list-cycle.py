@@ -5,10 +5,9 @@ First submitted: January 16, 2022
 Last submitted: September 30, 2024
 Submitted: September 26, 2024
 
-Runtime: 40 ms (beats 83.76%) 
+Runtime: 40 ms (beats 83.76%)
 Memory: 19.15 MB (beats 33.41%)
 """
-
 
 # Definition for singly-linked list.
 # class ListNode:

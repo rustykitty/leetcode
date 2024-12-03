@@ -1,5 +1,5 @@
 /*
-2648. Generate Fibonacci Sequence 
+2648. Generate Fibonacci Sequence
 
 Submitted: October 18, 2024
 

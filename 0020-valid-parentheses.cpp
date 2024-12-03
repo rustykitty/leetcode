@@ -15,7 +15,7 @@ public:
         for (const char& c : s) {
             if (c == '(' || c == '[' || c == '{') { // opening parentheses
                 stack.push_back(c);
-            } else if (stack.empty() || 
+            } else if (stack.empty() ||
                        stack.back() != (c == ')' ? '(' : // matching closing
                                         c == ']' ? '[' : // parentheses with
                                         c == '}' ? '{' : // open parentheses

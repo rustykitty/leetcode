@@ -9,8 +9,8 @@ Memory: 10.10 MB (beats 17.76%)
 */
 
 /*
-Approach: 
-We count the number of times each character appears in the two strings. If they 
+Approach:
+We count the number of times each character appears in the two strings. If they
 are equal, they must be anagrams.
 */
 

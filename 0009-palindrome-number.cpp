@@ -13,7 +13,7 @@ public:
         if (x < 0) return false;
         // Reverse digits
         long y = 0;
-        int x2 = x; 
+        int x2 = x;
         while (x2 != 0) {
             y *= 10;
             y += x2 % 10;

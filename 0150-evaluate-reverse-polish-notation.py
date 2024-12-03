@@ -15,15 +15,15 @@ class Solution:
                 x = stack.pop()
                 y = stack.pop()
                 stack.append(x + y)
-            elif token == "-": 
+            elif token == "-":
                 y = stack.pop()
                 x = stack.pop()
                 stack.append(x - y)
-            elif token == "*": 
+            elif token == "*":
                 x = stack.pop()
                 y = stack.pop()
                 stack.append(x * y)
-            elif token == "/": 
+            elif token == "/":
                 y = stack.pop()
                 x = stack.pop()
                 stack.append(int(x / y))

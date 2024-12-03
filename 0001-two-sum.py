@@ -16,4 +16,3 @@ class Solution:
                 return [i, d[want]]
             else:
                 d[nums[i]] = i
-        

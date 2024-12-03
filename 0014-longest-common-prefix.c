@@ -21,7 +21,7 @@ char* longestCommonPrefix(char** strs, int strsSize) {
     char* prefix = calloc(len_shortest + 1, sizeof(char));
     for (unsigned char i = 0; i < len_shortest; i++) {
         for (char** p = strs; p != strsEnd; ++p ) {
-            char* str = *p; 
+            char* str = *p;
             // this means that the prefix ends here
             if (str[i] != strs[0][i]) return prefix;
         }

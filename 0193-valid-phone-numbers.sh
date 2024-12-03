@@ -9,7 +9,7 @@
 while read REPLY; do # read line into $REPLY until EOF
     [[ $REPLY =~ ^[0-9]{3}-[0-9]{3}-[0-9]{4}$ ]] || # if $REPLY matches regex for nnn-nnn-nnnn
     [[ $REPLY =~ ^\([0-9]{3}\)\ [0-9]{3}\-[0-9]{4}$ ]] && # if $REPLY matches regex for (nnn) nnn-nnnn
-    echo $REPLY 
+    echo $REPLY
 done < file.txt # redirect stdin to read from file.txt
 # all in one line:
 # while read REPLY; do [[ $REPLY =~ ^[0-9]{3}-[0-9]{3}-[0-9]{4}$ ]] || [[ $REPLY =~ ^\([0-9]{3}\)\ [0-9]{3}\-[0-9]{4}$ ]] && echo $REPLY; done < file.txt

@@ -1,5 +1,5 @@
 /*
-2331. Evaluate Boolean Binary Tree 
+2331. Evaluate Boolean Binary Tree
 
 Submitted: December 2, 2024
 

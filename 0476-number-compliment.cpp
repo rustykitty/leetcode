@@ -18,7 +18,7 @@ public:
             n >>= 1;       // digits has the same number of `1` bits as
             digits <<= 1;  // the number of digits total in `n` when you
             digits++;      // remove leading zeroes
-        } 
+        }
         return d ^ digits; // 1 ^ 1 = 0, 0 ^ 1 = 1
     }
 };
