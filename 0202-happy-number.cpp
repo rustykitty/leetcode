@@ -12,7 +12,7 @@ public:
     bool isHappy(int n) {
         int fast = sumDigits(sumDigits(n));
         int slow = sumDigits(n);
-        while (fast != slow) { // Floyd's cycle detection algorithim
+        while (fast != slow) { // cycle detection algorithim
             fast = sumDigits(sumDigits(fast));
             slow = sumDigits(slow);
         }

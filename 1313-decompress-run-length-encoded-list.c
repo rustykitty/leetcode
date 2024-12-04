@@ -18,7 +18,7 @@ int* decompressRLElist(int* nums, int numsSize, int* returnSize) {
         *returnSize += *(p);
         p += 2;
     }
-    int* returnArray = malloc(*returnSize << 2);
+    int* returnArray = malloc(*returnSize << 2); // 32 bits = 4 bytes
     p = nums;
     int* r = returnArray;
     while (p != end) {

@@ -4,7 +4,7 @@
 Submitted: October 18, 2024
 
 Runtime: 0 ms (beats 100.00%)
-Memory: 11.16 MB (43.38%)
+Memory: 11.16 MB (beats 43.38%)
 */
 
 /**

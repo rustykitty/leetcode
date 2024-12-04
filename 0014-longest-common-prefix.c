@@ -22,7 +22,7 @@ char* longestCommonPrefix(char** strs, int strsSize) {
     for (unsigned char i = 0; i < len_shortest; i++) {
         for (char** p = strs; p != strsEnd; ++p ) {
             char* str = *p;
-            // this means that the prefix ends here
+            // not equal, prefix ends here
             if (str[i] != strs[0][i]) return prefix;
         }
         prefix[i] = strs[0][i];

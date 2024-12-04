@@ -23,11 +23,14 @@ public:
     ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
         if (list1 == nullptr) return list2;
         if (list2 == nullptr) return list1;
+        // start with whichever value is greater
         ListNode* head = list1->val > list2->val ? list2 : list1;
+        // advance that list to the next element
         if (head == list1) list1 = list1->next;
         else list2 = list2->next;
         ListNode* tail = head;
         while (list1 != nullptr && list2 != nullptr) {
+            // find smaller value and advance list
             if (list1->val > list2->val) {
                 tail->next = list2;
                 list2 = list2->next;
@@ -37,6 +40,7 @@ public:
             }
             tail = tail->next;
         }
+        // everything else is tacked on to the end
         tail->next = list1 == nullptr ? list2 : list1;
         return head;
     }

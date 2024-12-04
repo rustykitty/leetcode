@@ -13,7 +13,7 @@ public:
         int res = 0;
         while (num != 0) {
             res++;
-            if (num & 1) num--; // bitwise operations faster than arithmetic
+            if (num & 1) num--; // bitwise faster than arithmetic
             else num >>= 1;
         }
         return res;

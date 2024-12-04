@@ -20,7 +20,7 @@ public:
         }
         for (unsigned char i = 0; i < len_shortest; i++) {
             for ( const auto& str : strs ) {
-                // this means that the prefix ends here
+                // not equal, prefix ends here
                 if ( str[i] != strs.front()[i] ) return prefix;
             }
             prefix += strs.front()[i];

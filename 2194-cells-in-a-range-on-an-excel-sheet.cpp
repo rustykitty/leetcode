@@ -18,8 +18,8 @@ public:
         for (int i = startColumn; i != endColumn; ++i) {
             for (int j = startRow; j != endRow; ++j) {
                 string cell;
-                cell.push_back(i + 65);
-                cell.push_back(j + 48);
+                cell.push_back(i + 'A');
+                cell.push_back(j + '0');
                 cells.push_back(cell);
             }
         }

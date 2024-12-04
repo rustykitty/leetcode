@@ -15,16 +15,16 @@ public:
         for (const char& c : s) {
             if (c == '(' || c == '[' || c == '{') { // opening parentheses
                 stack.push_back(c);
-            } else if (stack.empty() ||
+            } else if (stack.empty() || // back() when deque is empty is UB
                        stack.back() != (c == ')' ? '(' : // matching closing
                                         c == ']' ? '[' : // parentheses with
                                         c == '}' ? '{' : // open parentheses
                                                    c)) {
                 return false;
-            } else {
+            } else { // valid pair
                 stack.pop_back();
             }
         }
-        return stack.empty();
+        return stack.empty(); 
     }
 };

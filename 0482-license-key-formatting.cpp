@@ -12,9 +12,9 @@ public:
     string licenseKeyFormatting(string s, int k) {
         unsigned short i = 0;
         string result;
-        // we go through the string backwards so that the first group can
-        // contain less than `k` digits. it's easier to make the last group
-        // different than the first group different.
+        // go through the string backwards so that the first group can
+        // contain less than `k` digits; easier to make the last group
+        // different than the first group different
         for (auto it = s.crbegin(); it != s.crend(); ++it) {
             const char& c = *it;
             if (c == '-') { // ignore hyphens

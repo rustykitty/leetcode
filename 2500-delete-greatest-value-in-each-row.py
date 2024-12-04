@@ -22,9 +22,6 @@ class Solution:
             elements = []
             for i in range(a):
                 elements.append(max(grid[i]))
-                #print(i)
-                #print(elements)
-            #raise BaseException(len(elements))
             res += max(elements)
             for i in range(a):
                 j = elements[i]

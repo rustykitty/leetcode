@@ -9,9 +9,9 @@ class Solution {
 public:
     bool isPerfectSquare(int num) {
         if (num == 1) return true;
-        int max = num < 46341 ? num : 46341; // 46341^2 is over 2^31-1,
-        for (int i = 0; i < max; ++i) {      // the max value of a 32-bit
-            if (i * i == num) return true;   // unsigned integer
+        int max = num < 46341 ? num : 46341; // 46341^2 > 2^31-1 (INT_MAX)
+        for (int i = 0; i < max; ++i) {
+            if (i * i == num) return true;
         }
         return false;
     }

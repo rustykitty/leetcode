@@ -13,7 +13,7 @@ Memory: 48.87 MB (beats 57.18%)
  */
 var once = function(fn) {
     var called = false;
-    return function(...args){
+    return function(...args){ // spread operator
         if (!called) {
             called = true;
             return fn(...args);

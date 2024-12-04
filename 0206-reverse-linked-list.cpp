@@ -28,7 +28,7 @@ public:
             head->next = head_next->next;
             head_next->next = new_head;
             new_head = head_next;
-        } // remove node after old "head" and add to front
+        } // remove node after original head and add to front
         return new_head;
     }
 };
