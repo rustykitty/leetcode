@@ -1,30 +1,32 @@
 /*
 242. Valid Anagram
 
-First submitted: October 10, 2024
-This solution: November 21, 2024
+Submitted: Decemebr 4, 2024
 
 Runtime: 0 ms (beats 100.00%)
-Memory: 10.10 MB (beats 17.76%)
+Memory: 9.44 MB (beats 47.03%)
 */
 
 /*
 Approach:
-We count the number of times each character appears in the two strings. If they
+Count the number of times each character appears in the two strings. If they
 are equal, they must be anagrams.
 */
 
 class Solution {
 public:
-    bool isAnagram(string s, string t) {
-        unordered_map<char, unsigned short> s_count;
-        unordered_map<char, unsigned short> t_count;
+    bool isAnagram(const string& s, const string& t) {
+        uint16_t* s_count = (uint16_t*) calloc(26, sizeof(uint16_t));
+        uint16_t* t_count = (uint16_t*) calloc(26, sizeof(uint16_t));
         for (const char& i : s) {
-            s_count[i]++;
+            s_count[i - 'a']++;
         }
         for (const char& i : t) {
-            t_count[i]++;
+            t_count[i - 'a']++;
         }
-        return s_count == t_count;
+        for (uint8_t i = 0; i < 26; ++i) {
+            if (s_count[i] != t_count[i]) return false;
+        }
+        return true;
     }
 };
