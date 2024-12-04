@@ -1,14 +1,14 @@
 """
 2108. Find First Palindromic String in the Array
 
-Submitted: October 30, 2024
+Submitted: December 4, 2024
 
-Runtime: 21 ms (beats 5.80%)
-Memory: 16.76 MB (beats 52.46%)
+Runtime: 0 ms (beats 100.00%)
+Memory: 17.6 MB (beats 6.80%)
 """
 
 class Solution:
     def firstPalindrome(self, words: List[str]) -> str:
         for word in words:
-            if all((i == j for i, j in zip(word, word[::-1]))): return word
+            if word == word[::-1]: return word
         return ""
