@@ -1,10 +1,10 @@
 /*
 700. Search in a Binary Search Tree
 
-Submitted: November 25, 2024
+Submitted: December 7, 2024
 
 Runtime: 0 ms (beats 100.00%)
-Memory: 33.56 MB (beats 59.28%)
+Memory: 35.52 MB (beats 8.78%)
 */
 
 /**
@@ -20,15 +20,12 @@ Memory: 33.56 MB (beats 59.28%)
  */
 class Solution {
 public:
-    TreeNode* searchBST(TreeNode*& root, const int& val) {
-        if (root == nullptr) return nullptr;
-        if (root->val == val) return root;
-        TreeNode *left = searchBST(root->left, val);
-        TreeNode *right = searchBST(root->right, val);
-        if (left != nullptr && left->val == val) return left;
-        else if (right != nullptr && right->val == val) return right;
-        else {
-            return root->val == val ? root : nullptr;
+    TreeNode* searchBST(TreeNode* root, const int val) {
+        while (true) {
+            if (root == nullptr) return nullptr;
+            if (root->val == val) return root;
+            if (root->val > val) root = root->left;
+            else if (root->val < val) root = root->right;
         }
     }
 };
