@@ -5,6 +5,8 @@ Submitted: December 8, 2024
 
 Runtime: 11 ms (beats 82.54%)
 Memory: 18.81 MB (beats 73.03%)
+
+See also 117 for a solution using level-order traversal
 */
 
 /*
