@@ -23,7 +23,7 @@ public:
         if (head->next == nullptr) {
             return nullptr;
         }
-        ListNode *slower = head; 
+        ListNode *slower = head;
         ListNode *fast = head->next->next;
         while (fast != nullptr && fast->next != nullptr) {
             slower = slower->next;

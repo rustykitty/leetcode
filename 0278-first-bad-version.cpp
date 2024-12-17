@@ -15,7 +15,7 @@ Memory: 7.58 MB (beats 62.02%)
 class Solution {
 public:
     int firstBadVersion(int n) {
-        
+
         while (isBadVersion(n)) n--; // go back by one until last good ver
         return n + 1; // ver after last good ver is first bad one
     }

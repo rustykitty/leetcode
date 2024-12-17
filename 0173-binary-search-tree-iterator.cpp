@@ -33,11 +33,11 @@ public:
         traverse(root);
         pos = arr.cbegin();
     }
-    
+
     int next() {
         return *pos++;
     }
-    
+
     bool hasNext() {
         return pos != arr.cend();
     }

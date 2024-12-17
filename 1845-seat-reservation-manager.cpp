@@ -24,7 +24,7 @@ public:
         seats.pop();
         return seatNumber;
     }
-    
+
     void unreserve(int seatNumber) {
         // seat is now available
         seats.push(seatNumber);

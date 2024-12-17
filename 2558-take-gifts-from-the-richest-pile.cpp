@@ -10,7 +10,7 @@ Memory: 13.26 MB (beats 36.35%)
 class Solution {
 public:
     long long pickGifts(vector<int>& gifts, int k) {
-        priority_queue<int> pq = { gifts.begin(), gifts.end() }; 
+        priority_queue<int> pq = { gifts.begin(), gifts.end() };
         for (int i = 0; i < k; ++i) {
             int temp = pq.top();
             pq.pop();
