@@ -5,6 +5,9 @@ Submitted: November 30, 2024
 
 Runtime: 67 ms (beats 85.54%)
 Memory: 173.16 MB (beats 55.15%)
+
+A solution for this problem using the std::list class rather than a custom 
+LinkedList class is contained within `0146-lru-cache-stl.cpp`.
 */
 
 class LinkedList {
