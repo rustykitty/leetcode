@@ -1,18 +1,17 @@
 """
 1. Two Sum
-First solved: February 27, 2024
-Last solved: November 22, 2024
+
+Submitted: January 16, 2025
 
 Runtime: 0 ms (beats 100.00%)
-Memory: 17.98 MB (beats 14.36%)
+Memory: 19.00 MB (beats 19.63%)
 """
 
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         d = {}
-        for i in range(len(nums)):
-            want = target - nums[i]
-            if want in d:
-                return [i, d[want]]
-            else:
-                d[nums[i]] = i
+        return next(x for x in (
+            (i, d[target - nums[i]]) if ((target - nums[i]) in d) else d.update({ nums[i]: i })
+            for i in range(len(nums))
+            ) if x is not None
+        )

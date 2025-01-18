@@ -1,16 +1,15 @@
 /*
 231. Power of Two
 
-Solved: December 9, 2024
+Submitted: January 17, 2025
 
 Runtime: 0 ms (beats 100.00%)
-Memory: 7.84 MB (beats 10.33%)
+Memory: 7.83 MB (beats 49.22%)
 */
 
 class Solution {
 public:
     bool isPowerOfTwo(int n) {
-        if (n <= 0) return false;
-        return !(n & (n - 1));
+        return (n > 0) && !(n & (n - 1));
     }
 };

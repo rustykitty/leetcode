@@ -1,13 +1,12 @@
 """
 709. To Lower Case
 
-Submitted: November 22, 2024
+Submitted: January 17, 2025
 
 Runtime: 0 ms (100.00%)
-Memory: 16.40 MB (beats 80.46%)
+Memory: 17.36 MB (beats 33.60%)
 """
 
 class Solution:
-    def __init__(self):
-        # this is a literal joke
-        self.toLowerCase = str.lower
+    def toLowerCase(self, s: str) -> str:
+        return s.lower()
