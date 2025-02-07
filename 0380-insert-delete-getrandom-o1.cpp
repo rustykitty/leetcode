@@ -16,7 +16,7 @@ public:
     
     bool insert(int val) {
         if (map.find(val) != map.end()) return false;
-        map[val] = arr.size();
+        map[val] = arr.size(); // store index of val in arr
         arr.push_back(val);
         return true;
     }
@@ -29,6 +29,11 @@ public:
             arr.erase(arr.end() - 1);
             return true;
         }
+        /*
+        remove val from arr in constant time:
+        since we don't care about the order of the elements in arr,
+        we can just swap val with the last element and then pop_back
+        */
         map[arr.back()] = pos;
         swap(arr[pos], arr.back());
         arr.erase(arr.end() - 1);
