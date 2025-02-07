@@ -12,9 +12,7 @@ private:
     unordered_map<int, int> map;
     vector<int> arr;
 public:
-    RandomizedSet() {
-        
-    }
+    RandomizedSet() { }
     
     bool insert(int val) {
         if (map.find(val) != map.end()) return false;
