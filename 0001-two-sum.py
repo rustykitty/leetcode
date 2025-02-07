@@ -11,7 +11,9 @@ class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         d = {}
         return next(x for x in (
-            (i, d[target - nums[i]]) if ((target - nums[i]) in d) else d.update({ nums[i]: i })
+            (i, d[target - nums[i]]) 
+            if ((target - nums[i]) in d) 
+            else d.__setitem__(nums[i], i) 
             for i in range(len(nums))
             ) if x is not None
         )
