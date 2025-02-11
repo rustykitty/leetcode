@@ -1,7 +1,7 @@
 """
 3174. Clear Digits
 
-Submitted: February 10, 2025
+LeetCode Daily Question for February 10, 2025
 
 Runtime: 3 ms (beats 29.98%)
 Memory: 17.56 MB (beats 88.57%)
