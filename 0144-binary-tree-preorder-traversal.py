@@ -1,10 +1,10 @@
 """
 144. Binary Tree Preorder Traversal
 
-Submitted: March 2, 2023
+Submitted: February 13, 2025
 
-Runtime: 41 ms (beats 100.00%)
-Memory: 13.84 MB (beats 100.00%)
+Runtime: 0 ms (beats 100.00%)
+Memory: 17.68 MB (beats 83.66%)
 """
 
 # Definition for a binary tree node.
@@ -13,14 +13,8 @@ Memory: 13.84 MB (beats 100.00%)
 #         self.val = val
 #         self.left = left
 #         self.right = right
+
 class Solution:
     def preorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
-        b=[]
-        def t(root):
-            if root is None:
-                return
-            b.append(root.val)
-            t(root.left)
-            t(root.right)
-        t(root)
-        return b
+        if not root: return []
+        return [root.val] + self.preorderTraversal(root.left) + self.preorderTraversal(root.right)

@@ -1,19 +1,18 @@
 /*
 1929. Concatenation of Array
 
-Submitted: October 7, 2024
+Submitted: February 25, 2025
 
-Runtime: 8 ms (beats 8.35%)
-Memory: 15.68 MB (beats 16.24%)
+Runtime: 0 ms (beats 100.00%)
+Memory: 17.18 MB (beats 17.74%)
 */
 
 class Solution {
 public:
-    vector<int> getConcatenation(vector<int>& nums) {
-        int length = nums.size();
-        for (int i = 0; i < length; ++i) {
-            nums.push_back(nums.at(i));
-        }
+    vector<int>& getConcatenation(vector<int>& nums) {
+        size_t n = nums.size();
+        nums.reserve(n * 2);
+        for (int i = 0; i < n; ++i) nums.push_back(nums[i]);
         return nums;
     }
 };
