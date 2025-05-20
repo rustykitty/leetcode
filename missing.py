@@ -13,6 +13,7 @@ if len(sys.argv) == 1:
 else:
     lang = sys.argv[1]
 
+# problem file format: NNNN-name-of-problem.lang
 pattern = re.compile(r'^(\d{4}-[a-z0-9\-]+)(\.[a-z]{2,4})$')
 
 ignored_extensions = (
