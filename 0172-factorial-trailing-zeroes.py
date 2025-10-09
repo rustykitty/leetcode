@@ -3,17 +3,9 @@
 
 Submitted: September 30, 2025
 
-Runtime: 3861 ms (beats 13.12%)
-Memory: 18.53 MB (beats 6.20%)
+Runtime: 2292 ms (beats 14.18%)
+Memory: 18.00 MB (beats 14.70%)
 """
-
-def factorial(n):
-    if n == 0: 
-        return 0
-    if n == 1:
-        return 1
-    else:
-        return factorial(n - 1) * n
 
 sys.set_int_max_str_digits(0)
 
