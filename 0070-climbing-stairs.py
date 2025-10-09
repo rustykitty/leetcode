@@ -3,14 +3,16 @@
 
 Submitted: January 9th, 2025
 
-Runtime: 1 ms (beats 3.84%)
-Memory: 17.59 MB (beats 37.71%)
+Runtime: 0 ms (beats 100.00%)
+Memory: 17.87 MB (beats 30.40%)
 """
 
 class Solution:
-    @functools.lru_cache(maxsize=45)
     def climbStairs(self, n: int) -> int:
-        if n == 0 or n == 1:
-            return 1
-        else:
-            return self.climbStairs(n - 1) + self.climbStairs(n - 2)
+        a = 0
+        b = 1
+        for _ in range(n):
+            c = a + b
+            a = b
+            b = c
+        return b

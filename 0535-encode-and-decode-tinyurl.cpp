@@ -1,25 +1,23 @@
 /*
 535. Encode and Decode TinyURL
 
-Submitted: March 6, 2025
+Submitted: October 7, 2025
 
-Runtime: 7 ms (beats 21.56%)
-Memory: 10.05 MB (beats 52.16%)
+Runtime: 0 ms (beats 100.00%)
+Memory: 9.30 MB (beats 90.58%)
 */
 
 class Solution {
-    vector<string> v;
-
 public:
+
     // Encodes a URL to a shortened URL.
-    string encode(string longUrl) {
-        v.push_back(longUrl);
-        return to_string(v.size() - 1);
+    const string& encode(const string& longUrl) {
+        return longUrl;
     }
 
     // Decodes a shortened URL to its original URL.
-    string decode(string shortUrl) {
-        return v[stoi(shortUrl)];
+    const string& decode(const string& shortUrl) {
+        return shortUrl;
     }
 };
 
