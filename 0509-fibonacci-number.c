@@ -1,18 +1,21 @@
 /*
 509. Fibonacci Number
 
-Submitted: January 9, 2025
+Submitted: October 20, 2025
 
-Runtime: 3 ms (beats 60.33%)
-Memory: 7.74 MB (beats 42.31%)
+Runtime: 0 ms (beats 100.00%)
+Memory: 7.75 MB (beats 48.05%)
 */
 
-int cache[30] = { 0 };
-int fib(int n) {
-    if (n == 0) return 0;
-    if (n == 1 || n == 2) return 1;
-    if (cache[n - 1] != 0) return cache[n - 1];
-    int res = fib(n - 2) + fib(n - 1);
-    if (cache[n - 1] == 0) cache[n - 1] = res;
-    return res;
+int fib (register int n) {
+    if (n == 0) {
+        return 0;
+    }
+    register int a = 0;
+    register int b = 1;
+    for (register int i = 0; i < n - 1; ++i) {
+        b += a;
+        a = b - a;
+    }
+    return b;
 }

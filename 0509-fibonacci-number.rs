@@ -1,8 +1,10 @@
 /*
 509. Fibonacci Number
 
+Submitted: October 20, 2025
+
 Runtime: 0 ms (beats 100.00%)
-Memory: 2.18 MB (beats 42.64%)
+Memory: 2.18 MB (beats 41.18%)
 */
 
 impl Solution {
@@ -13,9 +15,8 @@ impl Solution {
         let mut a = 0;
         let mut b = 1;
         for _ in (0..n-1) {
-            let c = a + b;
-            a = b;
-            b = c;
+            b += a;
+            a = b - a;
         }
         b
     }

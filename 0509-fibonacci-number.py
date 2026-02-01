@@ -1,10 +1,10 @@
 """
 509. Fibonacci Number
 
-Submitted: October 24, 2024
+Submitted: October 20, 2025
 
-Runtime: 44 ms (beats 43.14%)
-Memory: 17.60 MB (beats 89.43%)
+Runtime: 28 ms (beats 96.94%)
+Memory: 17.92 MB (beats 22.47%)
 """
 
 class Solution:
@@ -14,7 +14,6 @@ class Solution:
         a = 0
         b = 1
         for _ in range(n-1):
-            c = a + b
-            a = b
-            b = c
+            b += a
+            a = b - a
         return b
