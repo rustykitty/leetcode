@@ -1,7 +1,7 @@
 """
 268. Missing Number
 
-Submitted: Dec 13, 2025
+Submitted: December 13, 2025
 
 Runtime: 8 ms (beats 27.96%)
 Memory: 18.86 MB (beats 18.86%)

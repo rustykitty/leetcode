@@ -1,7 +1,7 @@
 """
 217. Contains Duplicate
 
-Submitted: Dec 13, 2025
+Submitted: December 13, 2025
 
 Runtime: 54 ms (beats 5.15%)
 Memory: 28.36 MB (beats 28.36%)

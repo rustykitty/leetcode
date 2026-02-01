@@ -1,7 +1,7 @@
 """
 648. Replace Words
 
-Submitted: Nov 20, 2025
+Submitted: November 20, 2025
 
 Runtime: 127 ms (beats 37.07%)
 Memory: 27.76 MB (beats 27.76%)

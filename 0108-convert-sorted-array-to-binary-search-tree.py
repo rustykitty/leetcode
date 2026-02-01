@@ -1,7 +1,7 @@
 """
 108. Convert Sorted Array to Binary Search Tree
 
-Submitted: Feb 01, 2026
+Submitted: February 1, 2026
 
 Runtime: 0 ms (beats 100.00%)
 Memory: 20.35 MB (beats 20.35%)

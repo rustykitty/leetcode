@@ -1,7 +1,7 @@
 """
 169. Majority Element
 
-Submitted: Dec 14, 2025
+Submitted: December 14, 2025
 
 Runtime: 0 ms (beats 100.00%)
 Memory: 19.25 MB (beats 19.25%)

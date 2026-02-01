@@ -1,7 +1,7 @@
 """
 49. Group Anagrams
 
-Submitted: Nov 20, 2025
+Submitted: November 20, 2025
 
 Runtime: 9 ms (beats 89.43%)
 Memory: 20.68 MB (beats 20.68%)

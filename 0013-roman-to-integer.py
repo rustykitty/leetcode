@@ -1,7 +1,7 @@
 """
 13. Roman to Integer
 
-Submitted: Feb 01, 2026
+Submitted: February 1, 2026
 
 Runtime: 19 ms (beats 5.06%)
 Memory: 19.60 MB (beats 19.60%)

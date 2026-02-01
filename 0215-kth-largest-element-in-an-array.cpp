@@ -1,7 +1,7 @@
 /**
 215. Kth Largest Element in an Array
 
-Submitted: Jan 14, 2026
+Submitted: January 14, 2026
 
 Runtime: 31 ms (beats 58.50%)
 Memory: 64.82 MB (beats 64.82%)

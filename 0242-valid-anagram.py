@@ -1,7 +1,7 @@
 """
 242. Valid Anagram
 
-Submitted: Dec 14, 2025
+Submitted: December 14, 2025
 
 Runtime: 7 ms (beats 90.79%)
 Memory: 17.90 MB (beats 17.90%)
