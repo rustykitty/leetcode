@@ -1,10 +1,10 @@
 """
 242. Valid Anagram
 
-Submitted: February 25, 2025
+Submitted: Dec 14, 2025
 
-Runtime: 7 ms (beats 89.87%)
-Memory: 18.05 MB (beats 32.84%)
+Runtime: 7 ms (beats 90.79%)
+Memory: 17.90 MB (beats 17.90%)
 """
 
 class Solution:

@@ -1,13 +1,18 @@
 """
 49. Group Anagrams
 
-Submitted: February 11, 2025
+Submitted: Nov 20, 2025
 
-Runtime: 21 ms (beats 24.46%)
-Memory: 20.82 MB (beats 56.56%)
+Runtime: 9 ms (beats 89.43%)
+Memory: 20.68 MB (beats 20.68%)
 """
 
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        strs.sort(key=sorted)
-        return [list(group) for (key, group) in itertools.groupby(strs, key=sorted)]
+        d = {}
+        for s in strs:
+            s_sorted = ''.join(sorted(s))
+            if s_sorted not in d:
+                d[s_sorted] = []
+            d[s_sorted].append(s)
+        return list(d.values())

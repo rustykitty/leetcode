@@ -3,118 +3,41 @@
 
 Submitted: November 30, 2024
 
-Runtime: 67 ms (beats 85.54%)
-Memory: 173.16 MB (beats 55.15%)
-
-A solution for this problem using the std::list class rather than a custom 
-LinkedList class is contained within `0146-lru-cache-stl.cpp`.
+Runtime: 91 ms (beats 41.34%)
+Memory: 182.10 MB (beats 37.53%)
 */
-
-class LinkedList {
-public:
-    struct Node {
-        int key;
-        int val;
-        Node* prev;
-        Node* next;
-        Node(int key, int val, Node* prev, Node* next) : key(key), val(val), prev(prev), next(next) {}
-        inline Node(int key, int val) : Node(key, val, nullptr, nullptr) {}
-    };
-    typedef unsigned short size_type;
-private:
-    Node* const head = new Node(-1, -1);
-    Node* const tail = new Node(-2, -2);
-    size_type currentSize = 0;
-
-    inline void validateNode(Node* node) const {
-        if (node == nullptr) throw invalid_argument("Node cannot be null");
-        if (node == head || node == tail) throw invalid_argument("Cannot modify head/tail node");
-    }
-public:
-    LinkedList() {
-        head->next = tail;
-        tail->prev = head;
-    }
-
-    Node* remove(Node* node) {
-        validateNode(node);
-        Node *prev = node->prev, *next = node->next;
-        prev->next = next;
-        next->prev = prev;
-        currentSize--;
-        return node;
-    }
-
-    inline void removeAndDelete(Node* node) {
-        validateNode(node);
-        delete remove(node);
-    }
-
-    inline Node* addToHead(int key, int val) {
-        Node* newNode = new Node(key, val, head, head->next);
-        addToHead(newNode);
-        return newNode;
-    }
-
-    void addToHead(Node* node) {
-        node->prev = head;
-        node->next = head->next;
-        head->next->prev = node;
-        head->next = node;
-        currentSize++;
-    }
-
-    inline void moveToHead(Node* node) {
-        validateNode(node);
-        // cout << node->val << endl;
-        remove(node);
-        addToHead(node);
-    }
-
-    inline void removeAndDeleteFromTail() {
-        removeAndDelete(tail->prev);
-    }
-
-    inline void removeFromTail() {
-        remove(tail->prev);
-    }
-
-    size_type size() const {
-        return currentSize;
-    }
-
-    Node* back() const {
-        return tail->prev;
-    }
-
-};
 
 class LRUCache {
 private:
-    const LinkedList::size_type capacity;
-    unordered_map<int, LinkedList::Node*> map;
-    LinkedList list;
+    const int capacity;
+    unordered_map<int, list<pair<int, int>>::iterator> map;
+    list<pair<int, int>> list;
 public:
-    LRUCache(int capacity) : capacity((LinkedList::size_type) capacity) {}
-
+    LRUCache(int capacity) : capacity(capacity) {}
+    
     int get(int key) {
-        if (map.count(key)) {
-            list.moveToHead(map[key]);
-            return map[key]->val;
+        if (map.find(key) != map.end()) {
+            int val = (*map[key]).second;
+            list.erase(map[key]);
+            list.push_front({ key, val });
+            map[key] = list.begin();
+            return val;
         }
         return -1;
     }
 
     void put(int key, int value) {
-        if (map.count(key)) {
-            list.moveToHead(map[key]);
-            map[key]->val = value;
+        if (map.find(key) != map.end()) {
+            list.erase(map[key]);
+            list.push_front({ key, value });
+            map[key] = list.begin();
         } else {
             if (list.size() == capacity) {
-                map.erase(list.back()->key);
-                list.removeAndDeleteFromTail();
+                map.erase(list.back().first);
+                list.pop_back();
             }
-            map[key] = list.addToHead(key, value);
+            list.push_front({ key, value });
+            map[key] = list.begin();
         }
     }
 };

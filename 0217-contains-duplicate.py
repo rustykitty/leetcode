@@ -1,11 +1,18 @@
 """
 217. Contains Duplicate
 
-Submitted: February 7, 2025
-Runtime: 18 ms (beats 20.84%)
-Memory: 31.66 MB (beats 30.18%)
+Submitted: Dec 13, 2025
+
+Runtime: 54 ms (beats 5.15%)
+Memory: 28.36 MB (beats 28.36%)
 """
 
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
-        return len(set(nums)) != len(nums)
+        nums = sorted(nums)
+        previous = nums[0]
+        for num in nums[1:]:
+            if previous == num:
+                return True
+            previous = num
+        return False

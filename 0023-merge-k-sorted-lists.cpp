@@ -1,10 +1,10 @@
 /*
 23. Merge k Sorted Lists
 
-Submitted: December 12, 2024
+Submitted: November 2, 2025
 
 Runtime: 0 ms (beats 100.00%)
-Memory: 18.28 MB (beats 84.05%)
+Memory: 18.27 MB (beats 90.92%)
 */
 
 /**
@@ -17,10 +17,11 @@ Memory: 18.28 MB (beats 84.05%)
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
+const auto cmp = [](ListNode* a, ListNode* b) { return a->val > b->val; };
+
 class Solution {
 public:
     ListNode* mergeKLists(vector<ListNode*>& lists) {
-        auto cmp = [](ListNode* a, ListNode* b) { return std::greater<int>()(a->val, b->val); };
         priority_queue<ListNode*, vector<ListNode*>, decltype(cmp)> pq;
         for (ListNode* list : lists) {
             if (list != nullptr) pq.push(list);
