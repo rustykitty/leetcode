@@ -2,7 +2,6 @@
 66. Plus One
 
 Submitted: September 26, 2024
-(See `0066-plus-one-alternative.py` for an alternative Python solution)
 
 Runtime: 41 ms (beats 5.16%)
 Memory: 16.52 MB (63.84%)
